@@ -1,8 +1,6 @@
 # Katapaty
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/katapaty`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A ruby gem for communicating with a Counterparty (Bitcoin / XCP) API server. Katapaty was inspired by counterparty_ruby.
 
 ## Installation
 
@@ -20,9 +18,21 @@ Or install it yourself as:
 
     $ gem install katapaty
 
+Set counterparty node configuration in `config/initializers/katapaty.rb`
+
+```ruby
+Katapaty.configure do |config|
+  config.username = 'rpc'
+  config.password = 'rpc'
+  config.host     = '200.200.10.50'
+  config.port     = 14000
+end
+```
+
+
 ## Usage
 
-TODO: Write usage instructions here
+`Katapaty.request(<method-name>, <params>)`
 
 ## Development
 
