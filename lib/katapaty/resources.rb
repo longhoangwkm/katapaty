@@ -1,19 +1,19 @@
 module Katapaty::Resources
   class Balance < Katapaty::Resource
     attr_accessor :address,
-    							:asset,
-    							:quantity
+                  :asset,
+                  :quantity
   end
 
   class Send < Katapaty::Resource
     attr_accessor :tx_index,
-    							:tx_hash,
-    							:block_index,
-    							:source,
-    							:destination,
-    							:asset,
-    							:quantity,
-    							:validity
+                  :tx_hash,
+                  :block_index,
+                  :source,
+                  :destination,
+                  :asset,
+                  :quantity,
+                  :validity
   end
 
   class Broadcast < Katapaty::Resource
