@@ -30,9 +30,9 @@ end
 ```
 
 
-## Usage
+## Usage Example
 
-`Katapaty.request(<method-name>, <params>)`
+`Katapaty.create_send({source: "mypcUU2fYyJav7XUpPLtMVhuPupArLJtiM", destination: "mjtwweXS2u5q1Ybypb271Wmehmj9g1w2th", asset: "LONGDD", quantity: 50000})`
 
 ## Development
 
