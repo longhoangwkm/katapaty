@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "A ruby gem for communicating with a Counterparty (Bitcoin / XCP) API server"
   spec.license       = "MIT"
+  spec.homepage      = "https://github.com/longhoangwkm/katapaty"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
