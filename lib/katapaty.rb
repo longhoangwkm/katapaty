@@ -1,3 +1,6 @@
+require 'rest-client'
+require 'json'
+
 require 'katapaty/version'
 require 'katapaty/configuration'
 require 'katapaty/errors'
