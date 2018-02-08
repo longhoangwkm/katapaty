@@ -24,6 +24,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_dependency "json"
+  spec.add_dependency "json", "~> 2.1.0"
   spec.add_dependency "rest-client", "~> 1.8.0"
+  spec.add_dependency "bitcoin-ruby", "0.0.15"
+  spec.add_dependency "ruby-rc4", "~> 0.1.5"
+  spec.add_dependency "ffi", "~> 1.9.21"
 end

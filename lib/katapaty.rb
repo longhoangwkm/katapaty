@@ -4,6 +4,7 @@ require 'json'
 require 'katapaty/version'
 require 'katapaty/configuration'
 require 'katapaty/errors'
+require 'katapaty/tx_decode'
 
 module Katapaty
 
