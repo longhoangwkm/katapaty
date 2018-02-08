@@ -1,5 +1,7 @@
 require 'rest-client'
 require 'json'
+require 'bitcoin'
+require 'rc4'
 
 require 'katapaty/version'
 require 'katapaty/configuration'
