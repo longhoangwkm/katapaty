@@ -18,13 +18,14 @@ Or install it yourself as:
 
     $ gem install katapaty
 
-Set counterparty node configuration in `config/initializers/katapaty.rb`
+Set your own counterparty node configuration in `config/initializers/katapaty.rb`
 
 ```ruby
+# This is testnet counterparty node of coindaddy, you can change your own server config
 Katapaty.configure do |config|
   config.username = 'rpc'
-  config.password = 'rpc'
-  config.host     = '200.200.10.50'
+  config.password = '1234'
+  config.host     = 'public.coindaddy.io'
   config.port     = 14000
 end
 ```
