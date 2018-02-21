@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "json", "~> 1.8"
   spec.add_dependency "rest-client", "~> 1.8.0"
-  spec.add_dependency "bitcoin-ruby", "0.0.15"
+  spec.add_dependency "bitcoin-ruby"
   spec.add_dependency "ruby-rc4", "~> 0.1.5"
   spec.add_dependency "ffi"
 end
