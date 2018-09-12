@@ -23,17 +23,29 @@ Set your own counterparty node configuration in `config/initializers/katapaty.rb
 ```ruby
 # This is testnet counterparty node of coindaddy, you can change your own server config
 Katapaty.configure do |config|
+  # For counterparty APIs
   config.username = 'rpc'
   config.password = '1234'
   config.host     = 'public.coindaddy.io'
   config.port     = 14000
+  # For counterblock APIs
+  config.block_username = 'rpc'
+  config.block_password = '1234'
+  config.block_host     = 'public.coindaddy.io'
+  config.block_port     = 14100
 end
 ```
 
-
 ## Usage Example
 
-`Katapaty.create_send({source: "mypcUU2fYyJav7XUpPLtMVhuPupArLJtiM", destination: "mjtwweXS2u5q1Ybypb271Wmehmj9g1w2th", asset: "LONGDD", quantity: 50000})`
+```ruby
+Katapaty::Party.create_send(
+  source: "mypcUU2fYyJav7XUpPLtMVhuPupArLJtiM",
+  destination: "mjtwweXS2u5q1Ybypb271Wmehmj9g1w2th",
+  asset: "LONGDD",
+  quantity: 50000
+)
+```
 
 Check methods here: https://counterparty.io/docs/api/#read-api-function-reference
 
