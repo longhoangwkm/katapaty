@@ -15,6 +15,11 @@ module Katapaty
         raise ResponseError.new response['error'] if response.has_key? 'error'
         response['result']
       end
+
+      def method_missing(name, *args)
+        args = args.nil? ? {} : args.first
+        request(name, args)
+      end
     end
   end
 end
