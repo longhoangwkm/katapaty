@@ -33,7 +33,7 @@ module Katapaty
       end
 
       def btc_unconfirm_balance(address)
-        get_unspent_txouts(address).map { |a| a['amount'] }.sum.to_d * 1e8).to_i
+        (get_unspent_txouts(address).map { |a| a['amount'] }.sum.to_d * 1e8).to_i
       end
 
       def get_unspent_txouts(address)
