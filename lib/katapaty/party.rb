@@ -6,7 +6,7 @@ module Katapaty
   class Party
     class << self
       def get_running_info
-        request(__method__.to_s)
+        request('get_running_info')
       end
 
       def address_token_balance(address, token_name)
@@ -17,19 +17,23 @@ module Katapaty
       end
 
       def get_asset_info(assets)
-        request(__method__, { assets: assets })
+        request('get_asset_info', { assets: assets })
       end
 
       def get_blocks(block_indexes)
-        request(__method__, { block_indexes: block_indexes })
+        request('get_blocks', { block_indexes: block_indexes })
       end
 
       def getrawtransaction(tx_hash)
-        request(__method__, { tx_hash: tx_hash })
+        request('getrawtransaction', { tx_hash: tx_hash })
       end
 
       def create_send(payload)
-        request(__method__, payload)
+        request('create_send', payload)
+      end
+
+      def create_order(payload)
+        request('create_order', payload)
       end
 
       def btc_unconfirm_balance(address)

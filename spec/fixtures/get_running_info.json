@@ -1,0 +1,10 @@
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 888
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+Server: Werkzeug/0.14.1 Python/3.5.1+
+Date: Tue, 10 Sep 2019 04:40:56 GMT
+
+{"result": {"indexd_blocks_behind": 0, "version_revision": 1, "running_regtest": false, "api_limit_rows": 1000, "db_caught_up": true, "last_block": {"block_hash": "00000000000000000017cdb16a4beaab24b62041c2b6ebfc58c41ecbc8e6455a", "block_index": 594108, "block_time": 1568090242, "messages_hash": "e775aa75497338e595d6bb6b5e49bd11ba2946181a89b92faf78aafd0beb64a4", "ledger_hash": "e8ce6cfe43022d41245e16cfb5d37c70f24de47f507029ab12f9ba3970dc4b1b", "difficulty": 10771996663680.396, "previous_block_hash": "000000000000000000160fc4fd481f9fde49990f181f5a10c3debb25958c891b", "txlist_hash": "4cd502d6f8019ab59464acd9909bf6ad8d88a8ae2e60a8619a2fcc5ec27b058d"}, "running_testnet": false, "last_message_index": 5475657, "bitcoin_block_count": 594108, "server_ready": true, "version_major": 9, "indexd_caught_up": true, "version_minor": 56, "running_testcoin": false}, "jsonrpc": "2.0", "id": 0}

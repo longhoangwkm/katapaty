@@ -1,0 +1,10 @@
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 539
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+Server: Werkzeug/0.14.1 Python/3.5.1+
+Date: Tue, 10 Sep 2019 09:02:43 GMT
+
+{"id": 0, "result": "010000000134045ae854f9ed4ccd9cf70523e8e67a55e6ddcdd615c0127e1c57d363e6559c010000006b483045022100fdd312e4b25e61f6ae9993715a27ecf368b306de37fe62a71b859804c280fa37022071c40e05b6e2a2ab5a33cef67d9d2d80c4952a3ee4822d8730d15a6c42ec14160121028c661bb03d755f834a47e5d267432ae2bb002a5a63af69fd0749892fb7966c03ffffffff020000000000000000306a2eb23bc9df3967a58d7a99c5dd28d94cc4dc5c1ac298383706dcc98219fffd2f02a4797edd831f09d1d2da213c2ec27b7a6901000000001976a914c8c934c4ad0fa394fd01747c375957f30752e26f88ac00000000", "jsonrpc": "2.0"}
