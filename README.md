@@ -33,6 +33,8 @@ Katapaty.configure do |config|
   config.block_password = '1234'
   config.block_host     = 'public.coindaddy.io'
   config.block_port     = 14100
+
+  config.ssl = true
 end
 ```
 
