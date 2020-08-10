@@ -17,7 +17,9 @@ module Katapaty
 
     def counterblock_url
       return 'http://rpc:1234@public.coindaddy.io:14100/api/' unless @block_host
-      "#{protocol}://#{@block_username}:#{@block_password}@#{@block_host}:#{@block_port}/api/"
+      authen = ''
+      authen = "#{@block_username}:#{@block_password}@" if @block_username
+      "#{protocol}://#{authen}#{@block_host}:#{@block_port}/api/"
     end
 
     private
