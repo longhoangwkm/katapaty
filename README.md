@@ -47,6 +47,8 @@ Katapaty::Party.create_send(
   asset: "LONGDD",
   quantity: 50000
 )
+
+Katapaty::Block.proxy_to_cp(method: :get_running_info)
 ```
 
 Check methods here: https://counterparty.io/docs/api/#read-api-function-reference
