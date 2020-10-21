@@ -9,11 +9,20 @@ module Katapaty
         request('get_running_info')
       end
 
-      def address_token_balance(address, token_name)
-        rs = request('get_balances', {"filters": [{ "field": 'address', "op": '==', "value": address },
-                                             { "field": 'asset', "op": '==', "value": token_name }]})
-        return 0 if rs.blank?
-        rs.first['quantity'].to_i
+      def address_token_balance(address: address, token: token, proxy: false)
+        filters_params = {
+          "filters": [
+            { "field": 'address', "op": '==', "value": address },
+            { "field": 'asset', "op": '==', "value": token }
+          ]
+        }
+        if proxy
+          response = Katapaty::Block.proxy_to_cp(method: :get_balances, params: filters_params)
+        else
+          response = request('get_balances', filters_params)
+        end
+        return 0 if response.blank?
+        response.first['quantity'].to_i
       end
 
       def get_asset_info(assets)
@@ -48,8 +57,8 @@ module Katapaty
         client = RestClient::Resource.new Katapaty.configuration.counterparty_url
         request = { method: method_name.to_s, params: payload, jsonrpc: '2.0', id: '0' }.to_json
         response = JSON.parse client.post(request,
-                      accept: 'json',
-                      content_type: 'json' )
+                                          accept: 'json',
+                                          content_type: 'json' )
         raise Katapaty::JsonResponseError.new response if response.has_key? 'code'
         raise Katapaty::ResponseError.new response['error'] if response.has_key? 'error'
         response['result']
