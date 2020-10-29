@@ -8,7 +8,10 @@ module Katapaty
       :block_password,
       :block_host,
       :block_port,
-      :ssl
+      :ssl,
+      :timeout
+
+    DEFAULT_TIMEOUT_IN_SECONDS = 60
 
     def counterparty_url
       return 'http://rpc:1234@public.coindaddy.io:14000/api/' unless @host
@@ -20,6 +23,10 @@ module Katapaty
       authen = ''
       authen = "#{@block_username}:#{CGI.escape(@block_password)}@" if @block_username
       "#{protocol}://#{authen}#{@block_host}:#{@block_port}/api/"
+    end
+
+    def timeout
+      @timeout || DEFAULT_TIMEOUT_IN_SECONDS
     end
 
     private

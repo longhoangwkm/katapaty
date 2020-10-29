@@ -7,7 +7,7 @@ module Katapaty
     class << self
 
       def request(method_name, params={})
-        client = RestClient::Resource.new Katapaty.configuration.counterblock_url
+        client = RestClient::Resource.new(Katapaty.configuration.counterblock_url, timeout: Katapaty.configuration.timeout)
         request = { method: method_name, params: params, jsonrpc: '2.0', id: '0' }.to_json
         response = JSON.parse client.post(
           request,
@@ -25,7 +25,7 @@ module Katapaty
       end
 
       def proxy_to_cp(method:, params: {})
-        client = RestClient::Resource.new Katapaty.configuration.counterblock_url
+        client = RestClient::Resource.new(Katapaty.configuration.counterblock_url, timeout: Katapaty.configuration.timeout)
         request = { method: :proxy_to_counterpartyd, params: { method: method, params: params }, jsonrpc: '2.0', id: '0' }.to_json
         response = JSON.parse client.post(
           request,

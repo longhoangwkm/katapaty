@@ -54,7 +54,7 @@ module Katapaty
       end
 
       def request(method_name, payload={})
-        client = RestClient::Resource.new Katapaty.configuration.counterparty_url
+        client = RestClient::Resource.new(Katapaty.configuration.counterparty_url, timeout: Katapaty.configuration.timeout)
         request = { method: method_name.to_s, params: payload, jsonrpc: '2.0', id: '0' }.to_json
         response = JSON.parse client.post(request,
                                           accept: 'json',
