@@ -11,7 +11,7 @@ module Katapaty
       :ssl,
       :timeout
 
-    DEFAULT_TIMEOUT_IN_SECONDS = 60
+    DEFAULT_TIMEOUT_IN_SECONDS = 120
 
     def counterparty_url
       return 'http://rpc:1234@public.coindaddy.io:14000/api/' unless @host
