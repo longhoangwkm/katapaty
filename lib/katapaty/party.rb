@@ -9,7 +9,7 @@ module Katapaty
         request('get_running_info')
       end
 
-      def address_token_balance(address:, token:, proxy: false)
+      def address_token_balance(address, token, proxy = false)
         filters_params = {
           "filters": [
             { "field": 'address', "op": '==', "value": address },
